@@ -1,0 +1,22 @@
+{
+  "name": "vue-ssr-build-demo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "build:client": "webpack --config build/webpack.client.config.js",
+    "build:server": "webpack --config build/webpack.server.config.js",
+    "build": "npm run build:server && npm run build:client",
+    "postinstall": "patch-package",
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.1",
+    "patch-package": "6.4.7",
+    "regenerator-runtime": "0.13.7",
+    "vue-ssr-build": "github:brophdawg11/vue-ssr-build#77d5f61ca90b8dc30f008f0d1ce4bae69b66b2cb"
+  }
+}
